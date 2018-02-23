@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html> 
+        <head>
+                <title>2nd jQuery</title>
+                <script type="text/javascript" src="../jquery/jquery.js"></script>
+                <script>
+                        $(document).ready(function(){                             
+                               
+
+                               $("#btn").click(function(){
+                                        alert("We totally click!");
+                                });
+                               $("#test").change(function(){
+                                        alert("Smell some changes!");
+                                });
+
+                               $("#text").keypress(function(){
+                                        alert("Key pressed");
+                                });
+
+                                $("#te").blur(function(){
+                                        alert("You're not in the text field anymore");
+                                });  
+                                 $("h3").mouseover(function(){
+                                        $("h2").slideDown("slow");
+                                });
+                                $("h3").mouseout(function(){
+                                        $("h2").slideUp("slow");
+                                }); 
+
+                                 $("#btnHide").click(function(){
+                                        $("h4").hide();
+                                }); 
+                                $("#btnShow").click(function(){
+                                        $("h4").show();
+                                });
+                                $("#btnToggle").click(function(){
+                                        $("#p2").toggle();
+                                });          
+                       });        
+                </script>
+        </head>
+        <body>         
+                <button id="btn">Click!</button><br><br>
+                <input type="text" id="test" value="Hello from the other side" />    
+                <p>Make changes and either press enter or click anywhere outside the textbox</p>      
+                <input type="text" id="text" value="" />
+                <p>Click inside the textbox and press a key in your keyboard.</p>
+                <input type="test" id="te" value="" />
+                <p>Click anywhere outside the text field to lose the focus of the text field</p>
+                <h3>mouse in and out</h3>
+                <h2>Tables turn Bridges burn We live n learn</h2> 
+                <button id="btnHide"> HIDE</button>
+                <h4 id="p1">Hidden</h4>
+                <h4 id="p5">Treasure</h4>                
+                <button id="btnShow">SHOW</button>
+                <p id="p2">Doodle Foodle Noodle</p> 
+                <button id="btnToggle">Toggle</button>           
+        </body>
+</html>

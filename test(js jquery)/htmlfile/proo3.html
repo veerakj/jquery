@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script>
+                function disp(){
+                        var num = document.getElementById("number").value;
+                        var x;
+                        for (x = 1;x<= num;x++) {
+                               
+                                document.getElementById("list").innerHTML += x;
+                        }
+                }
+        </script>
+</head>
+<body>
+        <input type="text" id="number" placeholder="Enter Number" /><br /><br />
+        <input type="submit" onclick="disp()" value="Display Number" /><br /><br>
+        <label id="list"></label>
+</body>
+</html>
+
+

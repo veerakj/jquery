@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JS Exam</title>
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+</head>
+<body>
+	<p id="var"></p>
+
+	<p id="func"></p>
+
+	<p id="ob1"></p>
+	<p id="ob2"></p>
+	<p id="ob3"></p>
+	<p id="ob4"></p>
+	<p id="ob5"></p>
+
+	<p id="on" onclick="myc()">Click Me!</p>
+	<input type="text" value="change" onchange="mych()"><br><br>
+	<input type="text" value="select" onselect="mys()"><br><br>
+	<input type="text" value="key" onkeypress="myk()">
+	<h4 id="mouse" onmouseover="onm()" onmouseout="ono()">Black and Blue</h4>
+
+	<input type="text" id="nad" placeholder="enter name">
+	<button onclick="mycheck()">Check Length</button>
+
+	<p id="list"></p>
+
+	<p id="txt"></p>
+	<p id="cs">Que Sera</p>
+	<p id="htm"></p>
+	<input type="text" id="inp"><br><br>
+	<button id="btn">Add Content</button>
+	<p id="app">Bridges Burn</p>
+	<p id="prep">Tables Turn</p>
+
+	<input type="text" id="on1" value="change"><br><br>
+	<input type="text" id="on2" value="key"><br><br>
+	<input type="text" id="on3" value="blur"><br><br>
+	<h2>Mouse over me</h2>
+	<h3>Thick Skin Elastic Heart</h3>
+	<h4 class="ht">Live fast Die Young</h4>
+	<h4 class="ht">Too Old to Live</h4>
+	<button id="bh">HIDE</button>
+	<button id="bs">SHOW</button>
+	<button id="bt">TOGGLE</button>
+
+	<h1>End</h1>
+	<script>
+		var x,y,z;
+		x="30";
+		y=50;
+		z=x+y;
+		document.getElementById("var").innerHTML=z;
+
+		function yourname(fn,ln){
+			return "Hello!"+" "+fn+" "+ln;
+		}
+		document.getElementById("func").innerHTML=yourname("Ada","Lace");
+
+		var me={name:"kanta",school:"MCC",skill:"piano",roll:"1309",contact:"kantajir@gmail.com"};
+		document.getElementById("ob1").innerHTML=me.name;
+		document.getElementById("ob2").innerHTML=me.skill;
+		document.getElementById("ob3").innerHTML=me.school;
+		document.getElementById("ob4").innerHTML=me.roll;
+		document.getElementById("ob5").innerHTML=me.contact;
+
+		function myc(){
+			document.getElementById("on").innerHTML="Clicked!!!";
+		}
+		function mych(){
+			alert("Things changed!");
+		}
+		function mys(){
+			alert("Things are selected!");
+		}
+		function myk(){
+			alert(" A key is pressed!");
+		}
+		function onm(){
+			document.getElementById("mouse").style.color="blue";
+		}
+		function ono(){
+			document.getElementById("mouse").style.color="black";
+		}
+
+		function mycheck(){
+			var nn=document.getElementById("nad").value;
+			var len=nn.length;
+			if(len<=10)
+				alert("Small name!!");
+			else if(len>10 && len<=20)
+				alert("Medium name!");
+			else if(len>20 && len<=30)
+				alert("Long name!");
+			else if(len>30 && len<=90)
+				alert("Very long name!");
+			else
+				alert("Enter a name");
+		}
+
+		for(var i=1;i<=12;i++)
+			document.getElementById("list").innerHTML += i;
+
+		$(document).ready(function() {
+			$("#txt").text("Amanda green");
+			$("#htm").html("Ride <em>coattails</em><p>To <strong>Finish line</strong></p>");
+			$("#cs").css("color","green");
+			$("#inp").val("Value is set");
+			$("#btn").click(function() {
+				$("#app").append("We live");
+				$("#prep").prepend("We learn");
+			});
+
+			$("#on1").change(function() {
+				alert("Smell some changes!");
+			});
+			$("#on2").keypress(function() {
+				alert("You pressed a key!");
+			});
+			$("#on3").blur(function() {
+				alert("Out of text field now!");
+			});
+			$("h2").mouseover(function() {
+				$("h3").slideDown("slow");
+			});
+			$("h2").mouseout(function() {
+				$("h3").slideUp("slow");
+			});
+			$("#bh").click(function() {
+				$(".ht").hide();
+			});
+			$("#bs").click(function() {
+				$(".ht").show();
+			});
+			$("#bt").click(function() {
+				$(".ht").toggle();
+			});
+		});
+	</script>
+</body>
+</html>

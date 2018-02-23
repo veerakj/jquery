@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Js exam</title>
+	<script src="../jquery/jquery.js" type="text/javascript" ></script>
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+</head>
+<body>
+	<h4>Adding and Storing variable</h4>
+	<p id="var"></p>
+
+	<h4>Using Function</h4>
+	<p id="name"></p>
+
+	<h4>Displaying object properties</h4>
+	<p id="na"></p>
+	<p id="sk"></p>
+	<p id="sc"></p>
+	<p id="mob"></p>
+	<p id="mu"></p>
+	
+
+	<h4>Js events on html elements</h4>
+	
+	<p id="oncl" onclick="myonclick()">Click me </p>
+	
+	<input id="on" type="text"  value="onchange" onchange="mychange()"><br><br>
+	
+	<input type="text" value="onselect i change" onselect="myselect()"><br><br>
+	
+	<input type="text" value="keypress event" onkeypress="mypress()"><br><br>
+	
+	<p id="mouse" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over me</p>
+
+
+	<h4>Else if statements</h4>
+	Enter name : <input id="nad" type="text"  value="" placeholder="type name">
+	<button type="submit" onclick="my()">Check length</button>
+
+
+	<h4>Displaying 1 to 12</h4>
+	<p id="list"></p>
+	
+	<h4>Jquery DOM methods</h4>
+	<p id="text">Ruby Rose</p>	
+	Set my value:<input type="text"  id="inp">
+	<p id="html">Try html method</p>
+	<p id="css">Que Sera</p>
+	<button id="btn">Add content</button>	
+	<p id="app">Bridges burn</p>
+	<p id="prep">We live and learn</p>
+
+	<h4>Jquery events and effects</h4>
+	<button id="bttn">Click!</button><br><br>
+    <input type="text" id="test" value="Hello from the other side" />    
+    <p>Make changes and either press enter or click anywhere outside the textbox</p>      
+    <input type="text" id="texxt" value="" />
+    <p>Click inside the textbox and press a key in your keyboard.</p>
+    <input type="test" id="te" value="" />
+    <p>Click anywhere outside the text field to lose the focus of the text field</p>
+    <h3>mouse in and out</h3>
+    <h2>Tables turn Bridges burn We live n learn</h2> 
+    <button id="btnHide"> HIDE</button>
+    <h4 id="p1">Hidden</h4>
+    <h4 id="p5">Treasure</h4>                
+    <button id="btnShow">SHOW</button>
+    <p id="p2">Doodle Foodle Noodle</p> 
+    <button id="btnToggle">Toggle</button>
+
+		<!--
+		<input type="text" id="in1" value="cool"><br><br>
+		<input type="text" id="in2" value="drool"><br><br>
+		<input type="text" id="in3" value="school"><br><br>
+		<p id="jmou">mouse over and out</p>
+		<p id="jm">Live fast, die young</p>
+		<p id="ht">Doodle Foodle Noodle</p>
+		<button id="hide" type="submit">Hide</button><br><br>
+		<button id="show" type="submit">Show</button><br><br>
+		<button id="tog" type="submit">Toggle</button>
+		$("#in1").change(function() {
+				
+				alert("things changed");
+			});
+			$("#in2").keypress(function() {
+				
+				alert("key pressed!");
+			});
+			$("#in3").blur(function() {
+				
+				alert("out of box");
+			});
+			$("#jmou").mouseover(function() {
+				$("#jm").slideDown("slow");
+			});
+			$("#jmou").mouseout(function() {
+				$("#jm").slideUp("slow");
+			});
+			$("#hide").click(function() {
+				$("#ht").hide();
+			});
+			$("#show").click(function() {
+				$("#ht").show();
+			});
+			$("#tog").click(function() {
+				$("#ht").toggle();
+			});
+
+		-->
+                
+
+
+
+	<script>
+		var x,y,z;
+		x=20;
+		y=30;
+		z=x+y;
+		document.getElementById("var").innerHTML=z;
+
+		function yourname(fname,lname){
+			return "Hello!"+" "+fname+" "+lname;
+		}
+		document.getElementById("name").innerHTML=yourname("Aga","Christi");
+		
+
+		var me={name:"Kanta",skills:"html,css,js",school:"mcc",mobile:"01625619983",music:"R&B"};
+		document.getElementById("na").innerHTML=me.name;
+		document.getElementById("sk").innerHTML=me.skills;
+		document.getElementById("sc").innerHTML=me.school;
+		document.getElementById("mob").innerHTML=me.mobile;
+		document.getElementById("mu").innerHTML=me.music;
+
+		function myonclick(){
+			document.getElementById("oncl").innerHTML="Clicked!";
+		}	
+		function mychange(){
+			document.getElementById("on").value="Changed!";
+		}
+		function myselect(){
+			alert(" Great Selection!");
+		}
+		function mypress() {
+    		alert("You pressed a key inside the input field");
+		}
+		function mouseOver() {
+    		document.getElementById("mouse").style.color = "blue";
+		}
+
+		function mouseOut() {
+    		document.getElementById("mouse").style.color = "black";
+		}
+
+
+		function my(){
+		var nam=document.getElementById("nad").value;
+		var nn=nam.length;
+		if( nn<=10)
+			alert("small name!");		
+		else if(nn>10 && nn<=20)
+			alert("Medium length");
+		else if(nn>20 && nn<=30)
+			alert("long name");
+		else if(nn>30 && nn<=90)
+			alert("too long name!");
+		else
+			alert("enter a name");
+	}
+
+	                       
+    for (var x = 1;x <=12;x++) 
+    	document.getElementById("list").innerHTML += x;
+
+    $(document).ready(function(){
+			$("#text").text("Amanda");
+			$("#inp").val("valueed is set");
+			$("#html").html("Ride <em>coattails</em><p>To the finish line</p>");
+			$("#css").css({
+				"color": "green",
+				"font-family": "cursive"
+			});
+			$("#btn").click(function(){
+               $("#app").append("Tables turn");
+                $("#prep").prepend("Tables turn");
+
+            }); 
+
+
+			
+                               $("#test").change(function(){
+                                        alert("Smell some changes!");
+                                });
+
+                               $("#texxt").keypress(function(){
+                                        alert("Key pressed");
+                                });
+
+                                $("#te").blur(function(){
+                                        alert("You're not in the text field anymore");
+                                });  
+                                 $("h3").mouseover(function(){
+                                        $("h2").slideDown("slow");
+                                });
+                                $("h3").mouseout(function(){
+                                        $("h2").slideUp("slow");
+                                }); 
+
+                                 $("#btnHide").click(function(){
+                                        $("h4").hide();
+                                }); 
+                                $("#btnShow").click(function(){
+                                        $("h4").show();
+                                });
+                                $("#btnToggle").click(function(){
+                                        $("#p2").toggle();
+                                });          
+
+		});
+
+
+	</script>
+</body>
+</html>

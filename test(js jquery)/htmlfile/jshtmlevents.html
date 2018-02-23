@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Js exam</title>
+	<script src="../jquery/jquery.js" type="text/javascript" ></script>
+</head>
+<body>
+	<h3>Js events on html elements</h3>
+	
+	<p id="oncl" onclick="myonclick()">Click me and change color</p>
+	
+	<input type="text" placeholder=" make changes" value="onchange" onchange="mychange()"><br><br>
+	
+	<input type="text" value="onselect i change" onselect="myselect()"><br><br>
+	
+	<input type="text" placeholder="keypress event" onkeypress="mypress()"><br><br>
+	
+	<p id="mouse" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over me</p>
+<script >
+		function myonclick(){
+			document.getElementById("oncl").style.color="red";
+		}	
+		function mychange(){
+			alert("You changed me!");
+		}
+		function myselect(){
+			alert(" Great Selection!");
+		}
+		function mypress() {
+    		alert("You pressed a key inside the input field");
+		}
+		function mouseOver() {
+    		document.getElementById("mouse").style.color = "blue";
+		}
+
+		function mouseOut() {
+    		document.getElementById("mouse").style.color = "black";
+		}
+</script>
+</body>

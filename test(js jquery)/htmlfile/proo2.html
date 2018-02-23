@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JavaScript Homework 2</title>
+</head>
+<body>
+
+	First name:<input type="text" placeholder="Awesome name goes here" id="firstname" value="" /><br><br>
+	Last name:<input type="text" placeholder="cool surname" id="lastname" value=""  /><br><br>
+	<button type="submit" onclick="namee()">Display Information</button><br><br>
+	<label id="fullname"></label>
+	
+	<script>
+		function namee(){
+			var fname,lname,info;
+			fname=document.getElementById("firstname").value;
+			lname=document.getElementById("lastname").value;
+			info=fname+" "+lname;
+			document.getElementById("fullname").innerHTML=info;
+		}	
+</script>
+</body>
+</html>

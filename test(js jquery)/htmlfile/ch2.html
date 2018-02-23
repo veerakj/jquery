@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>All about loops</title>
+       
+</head>
+<body>   <input type="text" id="number" placeholder="Enter Number" /><br /><br />
+        <input type="submit" onclick="goCheck()" value="Display Number" /><br /><br>
+        <label id="list"></label> <br><br>
+
+        <input type="text" id="fruity" placeholder="guess my favorite fruit"><br ><br>
+        <input type="submit" onclick="fruitCheck()" value="Fav Fruit Check"><br /><br>
+
+        <input type="text" id="fruitty" placeholder="guess more"><br ><br>
+        <input type="submit" onclick="fruittCheck()" value="More Fruit Check"><br />
+        <p id="demo"></p>
+         <script>
+                function goCheck(){
+                        var num = document.getElementById("number").value;
+                        var x;
+                        for (x = 0;x <= num;x++) {
+                               // var displayList = document.getElementById("list").innerHTML;
+                                document.getElementById("list").innerHTML += x;
+                               // console.log(x);
+                        }
+                }
+
+
+                function fruitCheck(){
+                        var fruitt = document.getElementById("fruity").value;
+                        if (fruitt == "mango") {
+                                alert('Yes!Mango smoothie tastes heavenly!');
+                        } else {
+                                alert('Noo! U should have known better');
+                        }
+                }
+                function fruittCheck(){
+                var fruit = document.getElementById("fruitty").value;
+                if(fruit == "Mango") {
+                        document.getElementById("demo").innerHTML = "mango Rocks!";
+                } else if (fruit == "mango") {
+                        document.getElementById("demo").innerHTML = "Yeah!banana is cool!";
+                } else {
+                        document.getElementById("demo").innerHTML = "Not even tasty!Duh!";
+                }
+        }
+        </script>
+</body>
+</html>

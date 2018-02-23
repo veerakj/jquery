@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	Enter name : <input id="na" type="text"  value="" placeholder="type name">
+	<button type="submit" onclick="my()">Check length</button>
+	<script>
+		
+		function my(){
+		var nam=document.getElementById("na").value;
+		var nn=nam.length;
+		if( nn<=10)
+			alert("small name!");
+		
+		else if(nn>=11 && nn<=20)
+			alert("Medium length");
+		else if(nn>=21 && nn<=30)
+			alert("long name");
+		else if(nn>=31 && nn<=90)
+			alert("too long name!");
+		else
+			alert("enter a name");
+	}
+	</script>
+</body>
+</html>

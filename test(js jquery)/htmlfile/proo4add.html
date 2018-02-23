@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Add numbers and display</title>
+	<script src="../jquery/jquery.js" type="text/javascript"></script>
+
+</head>
+<body>
+	Maths:<input type="number"  id="n1" value="" /><br><br>
+	English:<input type="number"  id="n2" value=""  /><br><br>
+	CS:<input type="number"  id="n3" value=""  /><br><br>
+	Moral:<input type="number"  id="n4" value=""  /><br><br>
+	<button type="submit" onclick="num()">Display total</button><br><br>
+	Total:<label id="total"></label><br><br>
+	Grade:<label id="grade"></label>
+	
+	<script>
+	function num(){
+		var num1=document.getElementById("n1").value;
+		var num2=document.getElementById("n2").value;
+		var num3=document.getElementById("n3").value;
+		var num4=document.getElementById("n4").value;
+		var num= +num1 + +num2 + +num3 + +num4 ;
+		document.getElementById("total").innerHTML=num;
+		if( num>=200)
+			document.getElementById("grade").innerHTML="A+";
+		else if(num>=101)
+			document.getElementById("grade").innerHTML="A";
+		else if(num>50 && num<=100)
+			document.getElementById("grade").innerHTML="B";
+		else
+			document.getElementById("grade").innerHTML="Fail!";
+
+	}
+	</script>
+</body>
+</html>

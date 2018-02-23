@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Trying JavaScript</title>
+</head>
+<body>
+        <p class="ren">Kou</p>
+        <h3>Just like</h3>
+        <h3 class="ren">Ikhon Rhythm</h3>
+        <p id="shinigami">DarK ParaDise</p>
+        <ul>
+          <li class="ren">Kou</li>
+          <li>Futaba</li>
+          <li>Murao</li>
+        </ul>
+        <p id="leggo"></p>
+        <p id="fire"></p>
+        <p id="mes"></p>
+        Name: <input type="text" id="myText" value="RiceGum">       
+         <h4>Imposter</h4> 
+         <h4>The Guest</h4>
+         <h5>Crayon</h5>
+         <h5 class="fix">Solo</h5>  
+         <button class="example" onclick="myFunction()">Try it</button>    
+        <script>
+                var x = document.getElementById("shinigami");
+                x.innerHTML="Shinigami only eats Apples";
+                x.style.color="green";
+                var y=document.getElementsByTagName("li");
+                document.getElementById("leggo").innerHTML=y[2].innerHTML;       
+                document.getElementsByTagName("p")[0].innerHTML="Ao Haru Ride";
+                document.getElementsByTagName("h3")[1].innerHTML="Kaneki"; 
+                document.getElementsByTagName("h3")[0].innerHTML="Sansa"; 
+                document.getElementsByTagName("h3")[1].innerHTML="Tiramisu";
+                document.getElementById("myText").value = "NigaHiga"; 
+                document.getElementsByClassName("ren")[2].style.color="red";
+                var bts="Junkook";
+                document.getElementById("fire").innerHTML=bts;
+                var fname="Tokyo";
+                var lname="Ghoul";
+                var name=fname+" "+lname;
+                document.getElementById("mes").innerHTML=name;
+                document.getElementsByTagName("h4")[1].innerHTML="The Gift";
+                
+                document.getElementsByClassName("fix").innerHTML="Got ME";
+                function myFunction() {
+                    var rk = document.getElementsByTagName("h5");
+                    var i;
+                    for (i = 0; i < rk.length; i++) {
+                        rk[i].style.color = "red";
+                        rk[i].innerHTML="NCT u";
+                    }
+            }
+               
+        </script>        
+        
+</body>
+</html>

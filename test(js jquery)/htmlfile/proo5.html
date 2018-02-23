@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jq 5</title>
+
+	<script src="../jquery/jquery.js" type="text/javascript" ></script>
+	
+</head>
+<body>
+	Fullname:<input type="text" id="name" value="" placeholder="Enter fullname">
+	<button id="btn">Click me</button>
+	<p></p>
+	<script>
+		//var nam=document.getElementById("name").value;
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				var x=$("#name").val();
+				$("p").text("Welcome to OLIVECODE");
+				$("p").append(" "+x);
+				$("p").css({
+					"width": "25%",
+    				"background-color": "yellow",
+    				/* text-align: center; */
+    				"font-size": "18px",
+    				"padding": "30px 0 40px 15px",
+    				"margin-top": "-1px"
+    
+				});				
+			});
+		});
+	</script>
+</body>
+</html>

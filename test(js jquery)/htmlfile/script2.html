@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title> Javascript</title>
+                <style>
+                #view{
+                        background-color: orange;
+                        width: 80px;
+                        height: 80px;
+                }
+        </style>
+        </head>
+        <body>
+                <p>The product of 5 and 2 using function </p>
+                <p id="dimo"></p>
+                <p>Creating a Javascript Object.</p>
+                <div id="view">
+                </div><br>
+                <button id="demo" onclick="turnOnOff()">Turn On</button>
+                <br>
+                <p onmouseover="pre()" style="background: red;width:100px">Hover your mouse in this text.</p>
+                <br>
+                <form>
+                  <p>Checking onkeypress event</p>
+                  <input type="text" placeholder="Type here.." id="demo" onkeypress="pressMe()" /><br><br>
+                  Select some text<br><input type="text" value="Hello World." id="deemo" onselect="prMe()" /><br><br>
+                   <p>Checking onchange event</p>
+                   <input type="text" placeholder="Type here.." id="deimo" onchange="pe()" /><br>
+                   <br>                 
+                   <input type="submit" value="Submit" onclick="press()" />
+                </form>
+                <script>
+                        function getProduct(a,b){
+                                return a * b;
+                        }
+                        document.getElementById("dimo").innerHTML = getProduct(5,2);
+                        var lightSwitch = {name:"light", width:"50%", color:"green"};
+                        function turnOnOff(){
+                                document.getElementById("view").style.width = lightSwitch.width;
+                        }
+                        function pressMe(){
+                                alert("You pressed a key in the keyboard");
+                        }
+                        function pre(){
+                                alert("You hovered your mouse in this text");
+                        }
+                         function prMe(){
+                                alert("You selected a text");
+                        }
+                        function pe(){
+                                alert("You changed the content of the text field");
+                        }
+                        function press(){
+                                alert("You Hit Me where it hurts!!");
+                        }
+                </script>
+        </body>
+</html>
